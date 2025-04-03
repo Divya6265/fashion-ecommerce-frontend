@@ -13,7 +13,7 @@ function Signin() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://127.0.0.1:8000/user/signin", {email, password} ).then(res => {
+    axios.post(import.meta.env.VITE_URL+"user/signin", {email, password} ).then(res => {
       localStorage.setItem("token", res.data.token)
       localStorage.setItem("user", JSON.stringify({name : res.data.user.name, email: res.data.user.email}) )
       // localStorage.setItem("email", res.data.user.email)

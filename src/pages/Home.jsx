@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Carousel from '../components/Carousel'
 import Card from "../components/Card"
 function Home( {products} ) {
-  console.log("products home", products.length)
+  // console.log("products home", products.length)
   return (
     <>
       <Header />

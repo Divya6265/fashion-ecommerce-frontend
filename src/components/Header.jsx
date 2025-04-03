@@ -17,7 +17,7 @@ function Header() {
   const count = useSelector((state) => state.counter.value)
   useEffect(() => {
 
-    axios.get("http://127.0.0.1:8000/user/profile", {
+    axios.get(import.meta.env.VITE_URL+"user/profile", {
       headers: {
         Authorization: localStorage.getItem('token') || null
       }

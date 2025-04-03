@@ -14,7 +14,8 @@ function App() {
  const [products, setProducts] = useState([]);
  useEffect( () => {
   const fetch  = async () => {
-    await axios.get("https://fashion-ecommerce-backend-em5o.onrender.com/products").then(res => {
+    // await axios.get("https://fashion-ecommerce-backend-em5o.onrender.com/products").then(res => {
+    await axios.get(import.meta.env.VITE_URL+"products").then(res => {
       setProducts(res.data.products)
     }).catch(err => {
       console.log("error to get products from backend", err)

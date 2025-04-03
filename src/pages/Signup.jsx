@@ -13,7 +13,7 @@ function Signup() {
   const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://127.0.0.1:8000/user/signup", {name, email, password,confirmPassword} ).then(res => {
+    axios.post(import.meta.env.VITE_URL+"user/signup", {name, email, password,confirmPassword} ).then(res => {
       console.log(res)
       navigate("/signin")
     }).catch(err => {
